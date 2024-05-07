@@ -86,7 +86,7 @@ int ProgramMain(int argc, char** argv) {
       result = ValidateModule(&module, &errors, options);
       if (Succeeded(result)) {
         result =
-            GenerateNames(&module, static_cast<NameOpts>(NameOpts::AlphaNames));
+            GenerateNames(&module, static_cast<NameOpts>(NameOpts::None));
       }
       if (Succeeded(result)) {
         // Must be called after ReadBinaryIr & GenerateNames, and before

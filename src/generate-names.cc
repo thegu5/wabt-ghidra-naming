@@ -229,7 +229,7 @@ Result NameGenerator::BeginIfExpr(IfExpr* expr) {
 }
 
 Result NameGenerator::VisitFunc(Index func_index, Func* func) {
-  MaybeGenerateAndBindName(&module_->func_bindings, "f", func_index,
+  MaybeGenerateAndBindName(&module_->func_bindings, "unnamed_function_", func_index,
                            &func->name);
   GenerateAndBindLocalNames(func);
 
